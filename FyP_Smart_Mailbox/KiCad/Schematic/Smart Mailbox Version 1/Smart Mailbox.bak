@@ -1,0 +1,268 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Raspberry_Pi_Zero_W_(v1.3):Raspberry_Pi_Zero_W_(v1.3) IC1
+U 1 1 5BAB6FE1
+P 4400 3950
+F 0 "IC1" H 5850 4215 50  0000 C CNN
+F 1 "Raspberry_Pi_Zero_W_(v1.3)" H 5850 4124 50  0000 C CNN
+F 2 "RASPBERRYPIZEROWV13" H 7150 4050 50  0001 L CNN
+F 3 "https://cdn.sparkfun.com/assets/learn_tutorials/6/7/6/PiZero_1.pdf" H 7150 3950 50  0001 L CNN
+F 4 "Raspberry Pi Zero W (v1.3) Single-board Computers" H 7150 3850 50  0001 L CNN "Description"
+F 5 "" H 7150 3750 50  0001 L CNN "Height"
+F 6 "RASPBERRY-PI" H 7150 3650 50  0001 L CNN "Manufacturer_Name"
+F 7 "Raspberry Pi Zero W (v1.3)" H 7150 3550 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "" H 7150 3450 50  0001 L CNN "RS Part Number"
+F 9 "" H 7150 3350 50  0001 L CNN "RS Price/Stock"
+F 10 "Raspberry Pi Zero W (v1.3)" H 7150 3250 50  0001 L CNN "Arrow Part Number"
+F 11 "" H 7150 3150 50  0001 L CNN "Arrow Price/Stock"
+	1    4400 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L hc-sr04:HC-SR04 U4
+U 1 1 5BAB70E5
+P 2850 4800
+F 0 "U4" H 2806 5237 60  0000 C CNN
+F 1 "HC-SR04" H 2806 5131 60  0000 C CNN
+F 2 "" H 2850 4800 60  0000 C CNN
+F 3 "" H 2850 4800 60  0000 C CNN
+	1    2850 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BAB722C
+P 3300 5000
+F 0 "R1" H 3370 5046 50  0000 L CNN
+F 1 "330" H 3370 4955 50  0000 L CNN
+F 2 "" V 3230 5000 50  0001 C CNN
+F 3 "~" H 3300 5000 50  0001 C CNN
+	1    3300 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BAB72C3
+P 3300 5400
+F 0 "R2" H 3370 5446 50  0000 L CNN
+F 1 "470" H 3370 5355 50  0000 L CNN
+F 2 "" V 3230 5400 50  0001 C CNN
+F 3 "~" H 3300 5400 50  0001 C CNN
+	1    3300 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Reed SW1
+U 1 1 5BAB7321
+P 3850 6150
+F 0 "SW1" H 3850 6372 50  0000 C CNN
+F 1 "SW_Reed" H 3850 6281 50  0000 C CNN
+F 2 "" H 3850 6150 50  0001 C CNN
+F 3 "" H 3850 6150 50  0001 C CNN
+	1    3850 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5BAB73B9
+P 3600 5850
+F 0 "R3" H 3670 5896 50  0000 L CNN
+F 1 "4.7K" H 3670 5805 50  0000 L CNN
+F 2 "" V 3530 5850 50  0001 C CNN
+F 3 "~" H 3600 5850 50  0001 C CNN
+	1    3600 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:TSR_1-2450 U1
+U 1 1 5BAB7833
+P 1800 3650
+F 0 "U1" H 1800 4017 50  0000 C CNN
+F 1 "Buck Converter" H 1800 3926 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT" H 1800 3500 50  0001 L CIN
+F 3 "http://www.tracopower.com/products/tsr1.pdf" H 1800 3650 50  0001 C CNN
+	1    1800 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery BT1
+U 1 1 5BAB794F
+P 3250 3750
+F 0 "BT1" H 3358 3796 50  0000 L CNN
+F 1 "Battery" H 3358 3705 50  0000 L CNN
+F 2 "" V 3250 3810 50  0001 C CNN
+F 3 "~" V 3250 3810 50  0001 C CNN
+	1    3250 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:TSR_1-2450 U3
+U 1 1 5BAB7D54
+P 3800 3650
+F 0 "U3" H 3800 4017 50  0000 C CNN
+F 1 "Boost Converter" H 3800 3926 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT" H 3800 3500 50  0001 L CIN
+F 3 "http://www.tracopower.com/products/tsr1.pdf" H 3800 3650 50  0001 C CNN
+	1    3800 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Solar_Cell SC1
+U 1 1 5BAB7EC6
+P 1000 3750
+F 0 "SC1" H 1108 3846 50  0000 L CNN
+F 1 "Solar Cell" H 1108 3755 50  0000 L CNN
+F 2 "" V 1000 3810 50  0001 C CNN
+F 3 "~" V 1000 3810 50  0001 C CNN
+	1    1000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:TSR_1-2450 U2
+U 1 1 5BAB842E
+P 2700 3650
+F 0 "U2" H 2700 4017 50  0000 C CNN
+F 1 "LIPO Charger" H 2700 3926 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT" H 2700 3500 50  0001 L CIN
+F 3 "http://www.tracopower.com/products/tsr1.pdf" H 2700 3650 50  0001 C CNN
+	1    2700 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3550 2300 3550
+Wire Wire Line
+	3100 3550 3250 3550
+Connection ~ 3250 3550
+Wire Wire Line
+	3250 3550 3400 3550
+Wire Wire Line
+	3800 3850 3800 3950
+Wire Wire Line
+	3800 3950 3250 3950
+Connection ~ 3250 3950
+Wire Wire Line
+	2700 3950 2700 3850
+Connection ~ 2700 3950
+Wire Wire Line
+	2700 3950 3250 3950
+Wire Wire Line
+	1800 3950 1800 3850
+Wire Wire Line
+	1800 3950 2700 3950
+Wire Wire Line
+	3050 4650 3600 4650
+Wire Wire Line
+	3800 4650 3800 4050
+Wire Wire Line
+	3800 4050 4250 4050
+Wire Wire Line
+	3050 4950 3200 4950
+Wire Wire Line
+	4100 4950 4100 4450
+Wire Wire Line
+	4100 4450 4400 4450
+Wire Wire Line
+	3300 5250 3300 5200
+Wire Wire Line
+	4400 5650 4150 5650
+Wire Wire Line
+	4150 5650 4150 5200
+Wire Wire Line
+	4150 5200 3300 5200
+Connection ~ 3300 5200
+Wire Wire Line
+	3300 5200 3300 5150
+Wire Wire Line
+	3300 5550 3300 5600
+Wire Wire Line
+	3300 5600 3200 5600
+Wire Wire Line
+	3200 5600 3200 4950
+Connection ~ 3200 4950
+Wire Wire Line
+	3200 4950 4100 4950
+Wire Wire Line
+	3050 4850 3300 4850
+Wire Wire Line
+	3050 4750 4200 4750
+Wire Wire Line
+	4200 4750 4200 5450
+Wire Wire Line
+	4200 5450 4400 5450
+Wire Wire Line
+	4200 3550 4250 3550
+Wire Wire Line
+	4250 3550 4250 4050
+Connection ~ 4250 4050
+Wire Wire Line
+	4250 4050 4400 4050
+Wire Wire Line
+	3600 5700 3600 4650
+Connection ~ 3600 4650
+Wire Wire Line
+	3600 4650 3800 4650
+Wire Wire Line
+	3600 6000 3600 6050
+Wire Wire Line
+	3600 6150 3650 6150
+Wire Wire Line
+	3600 6050 4400 6050
+Connection ~ 3600 6050
+Wire Wire Line
+	3600 6050 3600 6150
+Wire Wire Line
+	4050 6150 4250 6150
+Wire Wire Line
+	4250 6150 4250 5850
+Wire Wire Line
+	4250 5850 4400 5850
+Wire Wire Line
+	1400 3550 1000 3550
+Wire Wire Line
+	1000 3850 1000 3950
+Wire Wire Line
+	1000 3950 1800 3950
+Connection ~ 1800 3950
+Wire Wire Line
+	3800 3950 4100 3950
+Wire Wire Line
+	4100 3950 4100 4450
+Connection ~ 3800 3950
+Connection ~ 4100 4450
+$Comp
+L Camera:Camera U5
+U 1 1 5BAC1F80
+P 5150 2050
+F 0 "U5" H 5578 1671 50  0000 L CNN
+F 1 "Camera" H 5578 1580 50  0000 L CNN
+F 2 "" H 5150 2050 50  0001 C CNN
+F 3 "" H 5150 2050 50  0001 C CNN
+	1    5150 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Camera:arrow ar?
+U 1 1 5BAC3361
+P 5150 2800
+F 0 "ar?" H 5428 2275 50  0001 L CNN
+F 1 "arrow" H 5428 2230 50  0001 L CNN
+F 2 "" H 5150 2800 50  0001 C CNN
+F 3 "" H 5150 2800 50  0001 C CNN
+	1    5150 2800
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -1,0 +1,4 @@
+Hostname is set to: smartmailbox
+username: pi
+password: raspberry
+Set to try and connect to 'Ayam Goreng'

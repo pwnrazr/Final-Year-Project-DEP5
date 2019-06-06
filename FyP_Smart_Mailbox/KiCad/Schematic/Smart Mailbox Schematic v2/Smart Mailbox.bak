@@ -1,0 +1,426 @@
+EESchema Schematic File Version 4
+LIBS:Smart Mailbox-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L hc-sr04:HC-SR04 U4
+U 1 1 5BAB70E5
+P 1850 4100
+F 0 "U4" H 1806 4537 60  0000 C CNN
+F 1 "HC-SR04" H 1806 4431 60  0000 C CNN
+F 2 "" H 1850 4100 60  0000 C CNN
+F 3 "" H 1850 4100 60  0000 C CNN
+	1    1850 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BAB722C
+P 2800 4300
+F 0 "R1" H 2870 4346 50  0000 L CNN
+F 1 "1K" H 2870 4255 50  0000 L CNN
+F 2 "" V 2730 4300 50  0001 C CNN
+F 3 "~" H 2800 4300 50  0001 C CNN
+	1    2800 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BAB72C3
+P 2800 4700
+F 0 "R2" H 2870 4746 50  0000 L CNN
+F 1 "2K" H 2870 4655 50  0000 L CNN
+F 2 "" V 2730 4700 50  0001 C CNN
+F 3 "~" H 2800 4700 50  0001 C CNN
+	1    2800 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Reed SW1
+U 1 1 5BAB7321
+P 3700 4550
+F 0 "SW1" H 3700 4772 50  0000 C CNN
+F 1 "SW_Reed" H 3700 4681 50  0000 C CNN
+F 2 "" H 3700 4550 50  0001 C CNN
+F 3 "" H 3700 4550 50  0001 C CNN
+	1    3700 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:TSR_1-2450 U1
+U 1 1 5BAB7833
+P 1850 3000
+F 0 "U1" H 1850 3367 50  0000 C CNN
+F 1 "Buck Converter" H 1850 3276 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT" H 1850 2850 50  0001 L CIN
+F 3 "http://www.tracopower.com/products/tsr1.pdf" H 1850 3000 50  0001 C CNN
+	1    1850 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery BT1
+U 1 1 5BAB794F
+P 3300 3100
+F 0 "BT1" H 3408 3146 50  0000 L CNN
+F 1 "Battery" H 3408 3055 50  0000 L CNN
+F 2 "" V 3300 3160 50  0001 C CNN
+F 3 "~" V 3300 3160 50  0001 C CNN
+	1    3300 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:TSR_1-2450 U3
+U 1 1 5BAB7D54
+P 3850 3000
+F 0 "U3" H 3850 3367 50  0000 C CNN
+F 1 "Boost Converter" H 3850 3276 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT" H 3850 2850 50  0001 L CIN
+F 3 "http://www.tracopower.com/products/tsr1.pdf" H 3850 3000 50  0001 C CNN
+	1    3850 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Solar_Cell SC1
+U 1 1 5BAB7EC6
+P 1050 3100
+F 0 "SC1" H 1158 3196 50  0000 L CNN
+F 1 "Solar Cell" H 1158 3105 50  0000 L CNN
+F 2 "" V 1050 3160 50  0001 C CNN
+F 3 "~" V 1050 3160 50  0001 C CNN
+	1    1050 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:TSR_1-2450 U2
+U 1 1 5BAB842E
+P 2750 3000
+F 0 "U2" H 2750 3367 50  0000 C CNN
+F 1 "LIPO Charger" H 2750 3276 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT" H 2750 2850 50  0001 L CIN
+F 3 "http://www.tracopower.com/products/tsr1.pdf" H 2750 3000 50  0001 C CNN
+	1    2750 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 2900 2350 2900
+Wire Wire Line
+	3150 2900 3300 2900
+Connection ~ 3300 2900
+Wire Wire Line
+	3300 2900 3450 2900
+Wire Wire Line
+	3850 3200 3850 3300
+Wire Wire Line
+	3850 3300 3300 3300
+Connection ~ 3300 3300
+Wire Wire Line
+	2750 3300 2750 3200
+Connection ~ 2750 3300
+Wire Wire Line
+	2750 3300 3300 3300
+Wire Wire Line
+	1850 3300 1850 3200
+Wire Wire Line
+	1850 3300 2750 3300
+Wire Wire Line
+	4250 2900 4300 2900
+Wire Wire Line
+	1450 2900 1050 2900
+Wire Wire Line
+	1050 3200 1050 3300
+Wire Wire Line
+	1050 3300 1850 3300
+Connection ~ 1850 3300
+Wire Wire Line
+	3850 3300 4150 3300
+Connection ~ 3850 3300
+$Comp
+L Camera:Camera U5
+U 1 1 5BAC1F80
+P 5150 2050
+F 0 "U5" H 5578 1671 50  0000 L CNN
+F 1 "Camera" H 5578 1580 50  0000 L CNN
+F 2 "" H 5150 2050 50  0001 C CNN
+F 3 "" H 5150 2050 50  0001 C CNN
+	1    5150 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Camera:arrow ar?
+U 1 1 5BAC3361
+P 5150 2800
+F 0 "ar?" H 5428 2275 50  0001 L CNN
+F 1 "arrow" H 5428 2230 50  0001 L CNN
+F 2 "" H 5150 2800 50  0001 C CNN
+F 3 "" H 5150 2800 50  0001 C CNN
+	1    5150 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_DGS Q1
+U 1 1 5BAC41A5
+P 2550 5350
+F 0 "Q1" H 2756 5304 50  0000 L CNN
+F 1 "NMOSFET" H 2756 5395 50  0000 L CNN
+F 2 "" H 2750 5450 50  0001 C CNN
+F 3 "~" H 2550 5350 50  0001 C CNN
+	1    2550 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5BAC4250
+P 2600 5700
+F 0 "D1" H 2591 5916 50  0000 C CNN
+F 1 "LED" H 2591 5825 50  0000 C CNN
+F 2 "" H 2600 5700 50  0001 C CNN
+F 3 "~" H 2600 5700 50  0001 C CNN
+	1    2600 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5BAC4D27
+P 2950 5700
+F 0 "R4" H 3020 5746 50  0000 L CNN
+F 1 "47R" H 3020 5655 50  0000 L CNN
+F 2 "" V 2880 5700 50  0001 C CNN
+F 3 "~" H 2950 5700 50  0001 C CNN
+	1    2950 5700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2450 5700 2450 5550
+Wire Wire Line
+	2750 5700 2800 5700
+$Comp
+L Raspberry_Pi_Zero_W_(v1.3):Raspberry_Pi_Zero_W_(v1.3) IC1
+U 1 1 5BAB6FE1
+P 4400 3950
+F 0 "IC1" H 5850 4215 50  0000 C CNN
+F 1 "Raspberry_Pi_Zero_W_(v1.3)" H 5850 4124 50  0000 C CNN
+F 2 "RASPBERRYPIZEROWV13" H 7150 4050 50  0001 L CNN
+F 3 "https://cdn.sparkfun.com/assets/learn_tutorials/6/7/6/PiZero_1.pdf" H 7150 3950 50  0001 L CNN
+F 4 "Raspberry Pi Zero W (v1.3) Single-board Computers" H 7150 3850 50  0001 L CNN "Description"
+F 5 "" H 7150 3750 50  0001 L CNN "Height"
+F 6 "RASPBERRY-PI" H 7150 3650 50  0001 L CNN "Manufacturer_Name"
+F 7 "Raspberry Pi Zero W (v1.3)" H 7150 3550 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "" H 7150 3450 50  0001 L CNN "RS Part Number"
+F 9 "" H 7150 3350 50  0001 L CNN "RS Price/Stock"
+F 10 "Raspberry Pi Zero W (v1.3)" H 7150 3250 50  0001 L CNN "Arrow Part Number"
+F 11 "" H 7150 3150 50  0001 L CNN "Arrow Price/Stock"
+	1    4400 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR?
+U 1 1 5C0931F3
+P 2800 4900
+F 0 "#PWR?" H 2800 4650 50  0001 C CNN
+F 1 "Earth" H 2800 4750 50  0001 C CNN
+F 2 "" H 2800 4900 50  0001 C CNN
+F 3 "~" H 2800 4900 50  0001 C CNN
+	1    2800 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 4900 2800 4850
+$Comp
+L power:Earth #PWR?
+U 1 1 5C09509B
+P 2150 4350
+F 0 "#PWR?" H 2150 4100 50  0001 C CNN
+F 1 "Earth" H 2150 4200 50  0001 C CNN
+F 2 "" H 2150 4350 50  0001 C CNN
+F 3 "~" H 2150 4350 50  0001 C CNN
+	1    2150 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 4250 2150 4250
+Wire Wire Line
+	2150 4250 2150 4350
+Wire Wire Line
+	2800 4450 2800 4500
+Wire Wire Line
+	3900 4550 4400 4550
+Wire Wire Line
+	4400 3950 3400 3950
+Wire Wire Line
+	3400 3950 3400 4550
+Wire Wire Line
+	3400 4550 3500 4550
+Wire Wire Line
+	4400 4950 3250 4950
+Wire Wire Line
+	3250 4950 3250 4050
+Wire Wire Line
+	3250 4050 2050 4050
+Wire Wire Line
+	2800 4150 2050 4150
+Wire Wire Line
+	2800 4500 3150 4500
+Wire Wire Line
+	3150 4500 3150 5150
+Wire Wire Line
+	3150 5150 4400 5150
+Connection ~ 2800 4500
+Wire Wire Line
+	2800 4500 2800 4550
+Wire Wire Line
+	2750 5350 4400 5350
+$Comp
+L power:+5V #PWR?
+U 1 1 5C09DB02
+P 3150 5600
+F 0 "#PWR?" H 3150 5450 50  0001 C CNN
+F 1 "+5V" H 3165 5773 50  0000 C CNN
+F 2 "" H 3150 5600 50  0001 C CNN
+F 3 "" H 3150 5600 50  0001 C CNN
+	1    3150 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 5700 3150 5700
+Wire Wire Line
+	3150 5700 3150 5600
+Wire Wire Line
+	2450 5150 2450 5100
+Wire Wire Line
+	2450 5100 3000 5100
+Wire Wire Line
+	3000 5100 3000 5250
+Wire Wire Line
+	3000 5250 4400 5250
+$Comp
+L Device:LED D2
+U 1 1 5C09F9ED
+P 2600 6000
+F 0 "D2" H 2591 6216 50  0000 C CNN
+F 1 "LED" H 2591 6125 50  0000 C CNN
+F 2 "" H 2600 6000 50  0001 C CNN
+F 3 "~" H 2600 6000 50  0001 C CNN
+	1    2600 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C09F9F4
+P 2950 6000
+F 0 "R?" H 3020 6046 50  0000 L CNN
+F 1 "47R" H 3020 5955 50  0000 L CNN
+F 2 "" V 2880 6000 50  0001 C CNN
+F 3 "~" H 2950 6000 50  0001 C CNN
+	1    2950 6000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2750 6000 2800 6000
+Wire Wire Line
+	3100 6000 3150 6000
+$Comp
+L Device:LED D3
+U 1 1 5C0A03B9
+P 2600 6300
+F 0 "D3" H 2591 6516 50  0000 C CNN
+F 1 "LED" H 2591 6425 50  0000 C CNN
+F 2 "" H 2600 6300 50  0001 C CNN
+F 3 "~" H 2600 6300 50  0001 C CNN
+	1    2600 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C0A03C0
+P 2950 6300
+F 0 "R?" H 3020 6346 50  0000 L CNN
+F 1 "47R" H 3020 6255 50  0000 L CNN
+F 2 "" V 2880 6300 50  0001 C CNN
+F 3 "~" H 2950 6300 50  0001 C CNN
+	1    2950 6300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2750 6300 2800 6300
+Wire Wire Line
+	3100 6300 3150 6300
+$Comp
+L Device:LED D4
+U 1 1 5C0A03CB
+P 2600 6600
+F 0 "D4" H 2591 6816 50  0000 C CNN
+F 1 "LED" H 2591 6725 50  0000 C CNN
+F 2 "" H 2600 6600 50  0001 C CNN
+F 3 "~" H 2600 6600 50  0001 C CNN
+	1    2600 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C0A03D2
+P 2950 6600
+F 0 "R?" H 3020 6646 50  0000 L CNN
+F 1 "47R" H 3020 6555 50  0000 L CNN
+F 2 "" V 2880 6600 50  0001 C CNN
+F 3 "~" H 2950 6600 50  0001 C CNN
+	1    2950 6600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2750 6600 2800 6600
+Wire Wire Line
+	3100 6600 3150 6600
+Wire Wire Line
+	3150 5700 3150 6000
+Connection ~ 3150 5700
+Wire Wire Line
+	3150 6000 3150 6300
+Connection ~ 3150 6000
+Wire Wire Line
+	3150 6300 3150 6600
+Connection ~ 3150 6300
+Wire Wire Line
+	2450 6300 2450 6600
+Connection ~ 2450 6300
+Wire Wire Line
+	2450 6000 2450 6300
+Connection ~ 2450 6000
+Wire Wire Line
+	2450 5700 2450 6000
+Connection ~ 2450 5700
+Wire Wire Line
+	4150 3300 4150 4450
+Wire Wire Line
+	4150 4450 4400 4450
+Wire Wire Line
+	4300 2900 4300 4050
+Wire Wire Line
+	4300 4050 4400 4050
+$Comp
+L power:+5V #PWR?
+U 1 1 5C0A9787
+P 2150 3900
+F 0 "#PWR?" H 2150 3750 50  0001 C CNN
+F 1 "+5V" H 2165 4073 50  0000 C CNN
+F 2 "" H 2150 3900 50  0001 C CNN
+F 3 "" H 2150 3900 50  0001 C CNN
+	1    2150 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 3950 2150 3950
+Wire Wire Line
+	2150 3950 2150 3900
+$EndSCHEMATC
